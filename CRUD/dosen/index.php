@@ -11,6 +11,10 @@
 	<!-- Dosen -->
 	<div class="container">
 		<div class="alert alert-info">Data Dosen</div>
+		
+		<a href="create.php" class="btn btn-info">Tambah Data</a>
+		<br><br>
+
 		<table class="table table-bordered" cellpadding="10" cellspacing="0">
 			<thead>
 				<tr>
@@ -38,8 +42,12 @@
 					<td><?= $isi->nama_dosen; ?></td>
 					<td><?= $isi->alamat; ?></td>
 					<td>
-						<a href="" class="btn btn-warning">Edit</a>
-						<a href="" class="btn btn-danger">Delete</a>
+						<a href="update.php?url-nip=<?php echo $isi->nip;?>" 
+								class="btn btn-warning">Edit</a>
+
+						<a href="delete.php?nip=<?php echo $isi->nip;?>" 
+								class="btn btn-danger" onclick="return confirm ('Yakin ingin menghapus?');">
+									Delete</a>
 					</td>
 				</tr> 
 				<?php } ?>
